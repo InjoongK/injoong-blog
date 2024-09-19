@@ -3,7 +3,7 @@ layout: post
 title:  "First Blog Post"
 author: Injoong Kim
 description: "Blog introduction has not been decided yet."
-image: "/path/to/image
+image:
 ---
 
 ## Welcome to My Blog!
