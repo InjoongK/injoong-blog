@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "First Blog Post"
+title:  "Machine Learning vs Deep Learning: What’s the Real Difference?"
 author: Injoong Kim
-description: "Blog introduction has not been decided yet."
+description: "Machine learning and deep learning are often confused, but they work in distinct ways. In this post, we’ll quickly break down their key differences and their real-life applications."
 image:
 ---
 
