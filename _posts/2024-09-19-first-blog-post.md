@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "Navigating the AI Concepts: Understanding Machine Learning and Deep Learning"
+title: "Navigating the AI Concepts: Understanding Machine Learning and Deep Learning"
 author: Injoong Kim
 description: "Explore the key differences between Machine Learning (ML) and its advanced subfield, Deep Learning (DL). Learn how ML identifies patterns in data, while DL utilizes neural networks for more complex tasks. This post highlights how both technologies are shaping various industries such as autonomous systems."
 image:
 ---
+# Navigating the AI Concepts: Understanding Machine Learning and Deep Learning
 
 ## Introduction
 Artificial Intelligence (AI) is revolutionizing various industries by enabling machines to perform tasks that traditionally required human intelligence. Among its subfields, **Machine Learning (ML)** and **Deep Learning (DL)** are two pivotal concepts. While both are integral to AI, they serve different purposes and use distinct techniques. This article aims to clarify what machine learning and deep learning are, explain how they are related, and highlight their key differences. We will also explore real-world applications of each technology.
