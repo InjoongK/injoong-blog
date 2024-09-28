@@ -23,7 +23,6 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 
 #### Real-World Applications
 - **Spam Detection**: Gmail uses supervised learning algorithms to filter out spam. The algorithm analyzes email features, such as sender reputation and the presence of certain keywords, to classify emails as spam or not. Over time, it learns from user feedback, improving its accuracy.
-- **Fraud Detection**: Companies like PayPal utilize anomaly detection algorithms to monitor transactions for unusual patterns, flagging potentially fraudulent activities based on historical data and user behavior.
 - **Recommendation Systems**: Netflix employs collaborative filtering techniques to suggest shows and movies. It analyzes user viewing habits and preferences, comparing them to those of other users to recommend content that similar users enjoyed.
 - **Stock Price Prediction**: Financial firms like Goldman Sachs use regression algorithms to predict stock prices based on historical price data, economic indicators, and market sentiment analysis, helping investors make informed decisions.
 
@@ -37,7 +36,6 @@ Deep Learning is a specialized subset of machine learning that uses neural netwo
 #### Real-World Applications
 - **Autonomous Driving**: Tesla's Autopilot system uses deep neural networks to analyze data from cameras and sensors, allowing the car to navigate roads, recognize traffic signs, and make driving decisions. The system continuously learns from millions of miles driven, improving its accuracy and safety.
 - **Natural Language Processing**: Google's BERT (Bidirectional Encoder Representations from Transformers) uses deep learning to understand the context of words in search queries. This allows it to deliver more relevant search results and improve voice recognition capabilities for Google Assistant.
-- **Facial Recognition**: Facebook employs deep learning algorithms to recognize faces in photos. It uses convolutional neural networks (CNNs) to analyze facial features and identify individuals based on previously tagged images.
 - **Predictive Analytics**: Mount Sinai Health System employs deep learning models to predict patient outcomes based on electronic health records. By analyzing historical data, the models can forecast complications, helping healthcare providers tailor treatment plans.
 ![Deep Learning](path/to/your/image2.jpg) <!-- Placeholder for an image related to deep learning -->
 
