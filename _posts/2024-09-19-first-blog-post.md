@@ -5,7 +5,7 @@ author: Injoong Kim
 description: "Explore the key differences between Machine Learning (ML) and its advanced subfield, Deep Learning (DL). Learn how ML finds patterns in data, while DL uses neural networks for complex tasks, driving innovations in industries like healthcare and autonomous systems."
 image:
 ---
-<p><span class="dropcap" style="float: left; padding: 0px; font-size: 100px; line-height: 0px; margin-top: -5px; height: 60px;">A<span style="display: inline-block; height: 66px;"></span></span></p> rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.
+<p><span class="dropcap" style="float: left; padding: 0px; font-size: 100px; line-height: 0px; margin-top: -10px; height: 60px;">A<span style="display: inline-block; height: 66px;"></span></span></p> rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.
 
 ![AI Concepts](path/to/your/image.jpg) <!-- Placeholder for an image related to AI concepts -->
 
@@ -27,7 +27,7 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 - **Stock Price Prediction**: Financial firms like Goldman Sachs use regression algorithms to predict stock prices based on historical price data, economic indicators, and market sentiment analysis, helping investors make informed decisions.
 
 ### Deep Learning: The Advanced Side of Machine Learning
-Deep Learning is a specialized subset of machine learning that uses neural networks with multiple layers, known as deep neural networks.
+Deep Learning (DL) is a subset of machine learning that uses deep neural networks, which mimic the brain’s structure. These networks consist of multiple layers of neurons, enabling the model to automatically learn complex patterns from large datasets. Unlike traditional machine learning, which requires manual feature extraction, deep learning models excel in tasks like image recognition and speech processing by identifying features directly from the raw data.
 
 #### How It Works
 - **Mimicking the Human Brain**: Deep learning models are inspired by the structure and function of the human brain.
