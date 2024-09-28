@@ -17,9 +17,9 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 - **Decision-Making**: Once trained, the model can make predictions or decisions based on new data. Instead of following predefined rules, it uses statistical relationships learned during training to infer outcomes, continuously improving its accuracy over time.
 
 #### Types of Machine Learning
-- **Supervised Learning**: The model is trained on labeled data.
-- **Unsupervised Learning**: The model identifies patterns in unlabeled data.
-- **Reinforcement Learning**: The model learns through trial and error.
+- **Supervised Learning**: In supervised learning, the model is trained using labeled data, meaning each input comes with the correct output. The model learns by comparing its predictions to the actual labels and adjusting until it can accurately predict outcomes.
+- **Unsupervised Learning**: Unsupervised learning deals with unlabeled data. The model must discover hidden patterns or relationships within the data on its own. 
+- **Reinforcement Learning**: Reinforcement learning involves training a model to make decisions through trial and error, and receiving feedback through rewards or penalties.
 
 #### Real-World Applications
 - **Spam Detection**: Gmail uses supervised learning algorithms to filter out spam. The algorithm analyzes email features, such as sender reputation and the presence of certain keywords, to classify emails as spam or not. Over time, it learns from user feedback, improving its accuracy.
