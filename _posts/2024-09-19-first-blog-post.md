@@ -30,8 +30,8 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 Deep Learning (DL) is a subset of machine learning that uses deep neural networks, which mimic the brain’s structure. These networks consist of multiple layers of neurons, enabling the model to automatically learn complex patterns from large datasets. Unlike traditional machine learning, which requires manual feature extraction, deep learning models excel in tasks like image recognition and speech processing by identifying features directly from the raw data.
 
 #### How It Works
-- **Mimicking the Human Brain**: Deep learning models are inspired by the structure and function of the human brain.
-- **Complex Tasks**: DL excels at tasks like image and speech recognition, processing large amounts of data, and identifying intricate patterns.
+- **Mimicking the Human Brain**: Deep learning models are designed using artificial neural networks that mimic the way neurons in the human brain communicate. These networks consist of layers, where each layer extracts increasingly abstract features from the data, allowing the model to build a deep understanding of complex patterns.
+- **Complex Tasks**: Deep learning excels at processing vast amounts of data for tasks such as image and speech recognition. The multi-layered structure allows it to identify intricate patterns that traditional algorithms struggle to detect, making it ideal for high-dimensional data like photos, videos, and language.
 
 #### Real-World Applications
 - **Autonomous Driving**: Tesla's Autopilot system uses deep neural networks to analyze data from cameras and sensors, allowing the car to navigate roads, recognize traffic signs, and make driving decisions. The system continuously learns from millions of miles driven, improving its accuracy and safety.
