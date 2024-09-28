@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Navigating the AI Concepts: Understanding Machine Learning and Deep Learning"
+title:
 author: Injoong Kim
-description: "Explore the key differences between Machine Learning (ML) and its advanced subfield, Deep Learning (DL). Learn how ML identifies patterns in data, while DL utilizes neural networks for more complex tasks. This post highlights how both technologies are shaping various industries such as autonomous systems."
+description: 
 image:
 ---
 
