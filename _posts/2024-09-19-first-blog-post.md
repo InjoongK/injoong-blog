@@ -7,8 +7,7 @@ image:
 ---
 <p><span class="dropcap" style="float: left; padding: 0px; font-size: 100px; line-height: 0px; margin-top: -10px; height: 60px;">A<span style="display: inline-block; height: 66px;"></span></span></p> rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.
 
-![AI Image](_posts/images/AI.jpg)
-
+![AI Image](images/AI.jpg)
 
 ### What is Machine Learning?
 Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses on building systems capable of learning from data and making decisions or predictions based on that information. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
@@ -38,7 +37,6 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 - **Autonomous Driving**: Tesla's Autopilot system uses deep neural networks to analyze data from cameras and sensors, allowing the car to navigate roads, recognize traffic signs, and make driving decisions. The system continuously learns from millions of miles driven, improving its accuracy and safety.
 - **Natural Language Processing**: Google's BERT (Bidirectional Encoder Representations from Transformers) uses deep learning to understand the context of words in search queries. This allows it to deliver more relevant search results and improve voice recognition capabilities for Google Assistant.
 - **Predictive Analytics**: Mount Sinai Health System employs deep learning models to predict patient outcomes based on electronic health records. By analyzing historical data, the models can forecast complications, helping healthcare providers tailor treatment plans.
-![Deep Learning](path/to/your/image2.jpg) <!-- Placeholder for an image related to deep learning -->
 
 ### How Deep Learning Extends Machine Learning
 Despite their relationship, machine learning and deep learning have distinct characteristics:
@@ -64,5 +62,3 @@ Despite their relationship, machine learning and deep learning have distinct cha
 
 ### Conclusion
 In summary, deep learning is an advanced subset of machine learning, extending its capabilities through deep neural networks. Each has its strengths: machine learning is effective for tasks with smaller datasets and simpler algorithms, while deep learning excels in handling large datasets and more complex tasks. As both technologies continue to evolve, they are driving significant advancements in AI, shaping innovations in industries such as healthcare, autonomous systems, and natural language processing.
-
-![AI Future](path/to/your/image3.jpg) <!-- Placeholder for an image related to the future of AI -->
