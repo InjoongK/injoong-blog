@@ -30,7 +30,7 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 Deep Learning (DL) is a subset of machine learning that uses deep neural networks, which mimic the brain’s structure. These networks consist of multiple layers of neurons, enabling the model to automatically learn complex patterns from large datasets. Unlike traditional machine learning, which requires manual feature extraction, deep learning models excel in tasks like image recognition and speech processing by identifying features directly from the raw data.
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/AI-ML-DL.png" alt="AI subset image" width="452.275"; height="500">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/AI-ML-DL.png" alt="AI subset image" width="452.275" height="500">
 </div>
 
 #### How It Works
