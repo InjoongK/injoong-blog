@@ -18,7 +18,7 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/AI-ML-DL.png" alt="AI subset image" width="452.275" height="500">
-  <figcaption>Source: Wikimedia Commons </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Wikimedia Commons </figcaption>
 </div>
 
 #### How It Works
@@ -40,7 +40,7 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/DL_Layers.jfif" alt="Deep Learning Layers" width="740" height="416.25">
-  <figcaption>Source: Pexels </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Pexels </figcaption>
 </div>
 
 #### How It Works
