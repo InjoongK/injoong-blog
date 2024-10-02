@@ -11,9 +11,9 @@ image:
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg"> Wikimedia Commons</a></figcaption>
 </div>
 
-<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence is changing how we use technology, with Machine Learning and Deep Learning being its key branches. Deep Learning, a specialized form of Machine Learning, handles more complex tasks. 
+<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence is changing how we use technology, with Machine Learning and Deep Learning being its key branches. Deep Learning, a specialized form of Machine Learning, handles more complex tasks.<br>
 <br>
-If you've ever been confused about the differences between the two, you're not alone. In this blog, we’ll explain their basics, differences, and real-world applications to clear up any confusion.</p>
+If you've ever been confused about them, you're not alone. In this blog, we’ll explain their basics, differences, and real-world applications to clear up any confusion.</p>
 
 ### What is Machine Learning?
 Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses on building systems capable of learning from data and making decisions or predictions based on that information. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
