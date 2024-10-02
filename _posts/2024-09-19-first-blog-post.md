@@ -11,9 +11,8 @@ image:
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg"> Wikimedia Commons</a></figcaption>
 </div>
 
-<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence is changing how we use technology, with Machine Learning and Deep Learning being its key branches. Deep Learning, a specialized form of Machine Learning, handles more complex tasks.<br>
-<br>
-If you've ever been confused about them, you're not alone. In this blog, we’ll explain their basics, differences, and real-world applications to clear up any confusion.</p>
+<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence is changing how we use technology, with Machine Learning and Deep Learning being its key branches. Deep Learning, a specialized form of Machine Learning, handles more complex tasks.If you've ever been confused about them, you're not alone. In this blog, we’ll explain their basics, differences, and real-world applications to clear up any confusion.</p>
+
 
 ### What is Machine Learning?
 Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses on building systems capable of learning from data and making decisions or predictions based on that information. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
@@ -38,6 +37,7 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 - **Recommendation Systems**: Netflix employs collaborative filtering techniques to suggest shows and movies. It analyzes user viewing habits and preferences, comparing them to those of other users to recommend content that similar users enjoyed.
 - **Stock Price Prediction**: Financial firms like Goldman Sachs use regression algorithms to predict stock prices based on historical price data, economic indicators, and market sentiment analysis, helping investors make informed decisions.
 
+
 ### Deep Learning: The Advanced Side of Machine Learning
 Deep Learning (DL) is a subset of machine learning that uses deep neural networks, which mimic the brain’s structure. These networks consist of multiple layers of neurons, enabling the model to automatically learn complex patterns from large datasets. Unlike traditional machine learning, which requires manual feature extraction, deep learning models excel in tasks like image recognition and speech processing by identifying features directly from the raw data.
 
@@ -54,6 +54,7 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 - **Autonomous Driving**: Tesla's Autopilot system uses deep neural networks to analyze data from cameras and sensors, allowing the car to navigate roads, recognize traffic signs, and make driving decisions. The system continuously learns from millions of miles driven, improving its accuracy and safety.
 - **Natural Language Processing**: Google's BERT (Bidirectional Encoder Representations from Transformers) uses deep learning to understand the context of words in search queries. This allows it to deliver more relevant search results and improve voice recognition capabilities for Google Assistant.
 - **Predictive Analytics**: Mount Sinai Health System employs deep learning models to predict patient outcomes based on electronic health records. By analyzing historical data, the models can forecast complications, helping healthcare providers tailor treatment plans.
+
 
 ### How Deep Learning Extends Machine Learning
 Despite their relationship, machine learning and deep learning have distinct characteristics:
@@ -76,6 +77,7 @@ Despite their relationship, machine learning and deep learning have distinct cha
 #### Time and Resources
 - **Machine Learning**: Models typically take less time to train.
 - **Deep Learning**: Models demand more time and computational resources for training.
+
 
 ### Conclusion
 In summary, deep learning is an advanced subset of machine learning, extending its capabilities through deep neural networks. Each has its strengths: machine learning is effective for tasks with smaller datasets and simpler algorithms, while deep learning excels in handling large datasets and more complex tasks. As both technologies continue to evolve, they are driving significant advancements in AI, shaping innovations in industries such as healthcare, autonomous systems, and natural language processing.
