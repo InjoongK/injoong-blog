@@ -8,7 +8,7 @@ image:
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/AI.jpg" alt="AI image" width="600" height="480">
-  <figcaption>Source: Wikimedia Commons </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Wikimedia Commons </figcaption>
 </div>
 
 <p><span class="dropcap" style="float: left; padding: 0px; font-size: 100px; line-height: 0px; margin-top: -10px; height: 60px;">A<span style="display: inline-block; height: 66px;"></span></span></p> rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.
