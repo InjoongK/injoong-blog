@@ -8,21 +8,19 @@ image:
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/AI.jpg" alt="AI image" width="600" height="480">
-  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Wikimedia Commons </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg">Wikimedia Commons</a></figcaption>
 </div>
 
-<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.</p>
+<p><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.</p>
 
-
-
-<p><span class="dropcap" style="float: left; padding: 0px; font-size: 100px; line-height: 0px; margin-top: 20px; height: 60px;">A<span style="display: inline-block; height: 75px;"></span></span></p> rtificial Intelligence (AI) is transforming the way we interact with technology, and two of its most discussed branches are **Machine Learning (ML)** and **Deep Learning (DL)**. While both are subfields of AI, Deep Learning is a specialized subset of Machine Learning that tackles more complex tasks. If you've ever been confused about the differences between the two, you're not alone. In this blog, we'll break down the basics of Machine Learning and Deep Learning, explain how they relate to one another, and highlight their key differences. We'll also explore some real-world applications of both technologies to help clarify how they work in practice.
 
 ### What is Machine Learning?
 Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses on building systems capable of learning from data and making decisions or predictions based on that information. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/AI-ML-DL.png" alt="AI subset image" width="452.275" height="500">
-  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Wikimedia Commons </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:AI-ML-DL.svg">Wikimedia Commons</a></figcaption>
+
 </div>
 
 #### How It Works
@@ -44,7 +42,7 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/DL_Layers.jfif" alt="Deep Learning Layers" width="740" height="416.25">
-  <figcaption style="font-style: italic; color: #5e5e5e;">Source: Pexels </figcaption>
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.pexels.com/photo/an-artist-s-illustration-of-artificial-intelligence-ai-this-image-was-inspired-by-neural-networks-used-in-deep-learning-it-was-created-by-novoto-studio-as-part-of-the-visualising-ai-pr-17483874/">Pexels</a></figcaption>
 </div>
 
 #### How It Works
