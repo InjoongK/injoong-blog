@@ -83,7 +83,7 @@ Despite their relationship, machine learning and deep learning have distinct cha
 In summary, deep learning is an advanced subset of machine learning, extending its capabilities through deep neural networks. Each has its strengths: machine learning is effective for tasks with smaller datasets and simpler algorithms, while deep learning excels in handling large datasets and more complex tasks. As both technologies continue to evolve, they are driving significant advancements in AI, shaping innovations in industries such as healthcare, autonomous systems, and natural language processing.
 
 ### Try It Out!
-Now that you've learned about machine learning and deep learning, why not explore some videos or articles that demonstrate how to create simple deep learning models? Platforms like YouTube and educational websites offer many tutorials that guide you step-by-step through the process. This will help you see how these concepts work in practice and deepen your understanding!
+Now that you've learned about machine learning and deep learning, why not explore some videos or articles that demonstrate how to create simple deep learning models? Platforms like YouTube and educational websites (such as <a href="https://www.linkedin.com/learning/deep-learning-getting-started/creating-a-deep-learning-model?u=2153100"> LinkedIn Learning</a>) offer many tutorials that guide you step-by-step through the process. This will help you see how these concepts work in practice and deepen your understanding!
 
 ### What’s Coming Next?
 Curious about how to bring your data to life? In the next post, we’ll explore various data visualization tools that can help you effectively communicate insights.
