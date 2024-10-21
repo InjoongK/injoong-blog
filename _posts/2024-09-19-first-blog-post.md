@@ -30,7 +30,7 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 #### Types of Machine Learning
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning" width="452.275" height="500"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
 
 </div>
 
