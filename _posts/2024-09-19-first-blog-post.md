@@ -28,9 +28,18 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 - **Decision-Making**: Once trained, the model can make predictions or decisions based on new data. Instead of following predefined rules, it uses statistical relationships learned during training to infer outcomes, continuously improving its accuracy over time.
 
 #### Types of Machine Learning
+
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes" alt="AI subset image" width="452.275" height="500">
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
+
+</div>
+
 - **Supervised Learning**: In supervised learning, the model is trained using labeled data, meaning each input comes with the correct output. The model learns by comparing its predictions to the actual labels and adjusting until it can accurately predict outcomes.
 - **Unsupervised Learning**: Unsupervised learning deals with unlabeled data. The model must discover hidden patterns or relationships within the data on its own. 
 - **Reinforcement Learning**: Reinforcement learning involves training a model to make decisions through trial and error, and receiving feedback through rewards or penalties.
+
+If you want to know more about types of machine learning, you can refer to my recommended <a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn post</a>.
 
 #### Real-World Applications
 - **Spam Detection**: Gmail uses supervised learning algorithms to filter out spam. The algorithm analyzes email features, such as sender reputation and the presence of certain keywords, to classify emails as spam or not. Over time, it learns from user feedback, improving its accuracy.
@@ -48,7 +57,7 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 
 #### How It Works
 - **Mimicking the Human Brain**: Deep learning models are designed using artificial neural networks that mimic the way neurons in the human brain communicate. These networks consist of layers, where each layer extracts increasingly abstract features from the data, allowing the model to build a deep understanding of complex patterns.
-- **Complex Tasks**: Deep learning excels at processing vast amounts of data for tasks such as image and speech recognition. The multi-layered structure allows it to identify intricate patterns that traditional algorithms struggle to detect, making it ideal for high-dimensional data like photos, videos, and language.
+- **Complex Tasks**: Deep learning excels at processing vast amounts of data for tasks such as image and speech recognition. The multi-layered structure allows it to identify intricate patterns that traditional algorithms struggle to detect, making it ideal for high-dimensional data. High-dimensional data is data with many different factors, like images, which have color, shape, and texture.
 
 #### Real-World Applications
 - **Autonomous Driving**: Tesla's Autopilot system uses deep neural networks to analyze data from cameras and sensors, allowing the car to navigate roads, recognize traffic signs, and make driving decisions. The system continuously learns from millions of miles driven, improving its accuracy and safety.
@@ -57,10 +66,10 @@ Deep Learning (DL) is a subset of machine learning that uses deep neural network
 
 
 ### How Deep Learning Extends Machine Learning
-Despite their relationship, machine learning and deep learning have distinct characteristics:
+Despite their relationship, machine learning and deep learning have distinct characteristics.
 
 #### Shared Foundations
-- Both ML and DL utilize data-driven models and algorithms to learn and make decisions.
+- Both ML and DL utilize data-driven models and algorithms to learn and make decisions. Data-driven model is a computational model that uses historical data to establish relationships between variables in a system or process
 
 #### Data Requirements
 - **Machine Learning**: Can work with smaller datasets.
@@ -71,6 +80,7 @@ Despite their relationship, machine learning and deep learning have distinct cha
 - **Deep Learning**: Requires more computational power due to the complexity of neural networks.
 
 #### Feature Extraction
+Feature Extraction is a process that identifies important information from data that helps make decisions.
 - **Machine Learning**: Often necessitates manual feature engineering.
 - **Deep Learning**: Automatically learns features from raw data.
 
@@ -83,7 +93,7 @@ Despite their relationship, machine learning and deep learning have distinct cha
 In summary, deep learning is an advanced subset of machine learning, extending its capabilities through deep neural networks. Each has its strengths: machine learning is effective for tasks with smaller datasets and simpler algorithms, while deep learning excels in handling large datasets and more complex tasks. As both technologies continue to evolve, they are driving significant advancements in AI, shaping innovations in industries such as healthcare, autonomous systems, and natural language processing.
 
 ### Try It Out!
-Now that you've learned about machine learning and deep learning, why not explore some videos or articles that demonstrate how to create simple deep learning models? Platforms like YouTube and educational websites (such as <a href="https://www.linkedin.com/learning/deep-learning-getting-started/creating-a-deep-learning-model?u=2153100"> LinkedIn Learning</a>) offer many tutorials that guide you step-by-step through the process. This will help you see how these concepts work in practice and deepen your understanding!
+Now that you've learned about machine learning and deep learning, why not explore some videos or articles that demonstrate how to create simple deep learning models? Platforms like <a href="https://www.youtube.com/watch?v=J4Qsr93L1qs"> YouTube</a> and educational websites (such as <a href="https://learning.linkedin.com/"> LinkedIn Learning</a> or <a href="https://www.coursera.org/"> Coursea</a>) offer many tutorials that guide you step-by-step through the process. This will help you see how these concepts work in practice and deepen your understanding!
 
 ### What’s Coming Next?
 Curious about how to bring your data to life? In the next post, we’ll explore various data visualization tools that can help you effectively communicate insights.
