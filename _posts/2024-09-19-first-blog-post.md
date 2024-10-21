@@ -15,7 +15,7 @@ image:
 
 
 ### What is Machine Learning?
-Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses on building systems capable of learning from data and making decisions or predictions based on that information. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
+Machine Learning (ML) is a type of AI where computers learn from data to make decisions or predictions. Instead of telling the computer exactly what to do, we give it lots of examples, and it figures things out by itself. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/AI-ML-DL.png" alt="AI subset image" width="452.275" height="500">
@@ -24,17 +24,17 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 </div>
 
 #### How It Works
-- **Algorithms Learn from Data**: Machine learning algorithms process large datasets to identify patterns and relationships. During training, the model adjusts its parameters based on feedback, refining its understanding as it encounters more data.
+- **Algorithms Learn from Data**: Machine learning works by studying lots of data to find patterns. It's like teaching a computer by showing it examples. The more it learns, the better it gets at making predictions.
 - **Decision-Making**: Once trained, the model can make predictions or decisions based on new data. Instead of following predefined rules, it uses statistical relationships learned during training to infer outcomes, continuously improving its accuracy over time.
 
 #### Types of Machine Learning
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning" width="700" height="350"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning" width="770" height="385"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
 </div>
 
 - **Supervised Learning**: In supervised learning, the model is trained using labeled data, meaning each input comes with the correct output. The model learns by comparing its predictions to the actual labels and adjusting until it can accurately predict outcomes.
-- **Unsupervised Learning**: Unsupervised learning deals with unlabeled data. The model must discover hidden patterns or relationships within the data on its own. 
+- **Unsupervised Learning**: In unsupervised learning, the computer gets data without any labels. It has to figure out patterns all by itself, like trying to group things that are similar. 
 - **Reinforcement Learning**: Reinforcement learning involves training a model to make decisions through trial and error, and receiving feedback through rewards or penalties.
 
 If you want to know more about types of machine learning, you can refer to my recommended <a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn post</a>.
