@@ -31,7 +31,6 @@ Machine Learning (ML) is a subfield of Artificial Intelligence (AI) that focuses
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning" width="700" height="350"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
-
 </div>
 
 - **Supervised Learning**: In supervised learning, the model is trained using labeled data, meaning each input comes with the correct output. The model learns by comparing its predictions to the actual labels and adjusting until it can accurately predict outcomes.
