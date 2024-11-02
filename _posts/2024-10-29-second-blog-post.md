@@ -11,7 +11,9 @@ image:
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg"> Wikimedia Commons</a></figcaption>
 </div>
 
-<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">I<span style="display: inline-block; height: 66px;"></span></span>n the realm of data science, web scraping is an essential tool for uncovering valuable insights hidden within the vast expanse of online information. For this blog post, I’ve combined my love for baseball with web scraping skills and wanted to find an answer to the following question: Do physical attributes like height and weight truly influence a player’s ability to smash home runs in Major League Baseball? The ultimate goal of this blog is to allow you to understand web scraping and encourage you to try web scraping out for yourself after reading this post.</p>
+<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">I<span style="display: inline-block; height: 66px;"></span></span>n the realm of data science, web scraping is an essential tool for uncovering valuable insights hidden within the vast expanse of online information. For this blog post, I’ve combined my love for baseball with web scraping skills and wanted to find an answer to the following question: Do physical attributes like height and weight truly influence a player’s ability to smash home runs in Major League Baseball?</p>
+<br>
+<p>The ultimate goal of this blog is to allow you to understand web scraping and encourage you to try web scraping out for yourself after reading this post.</p>
 
 
 ### What is Machine Learning?
