@@ -12,11 +12,8 @@ image:
 </div>
 
 <p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">I<span style="display: inline-block; height: 66px;"></span></span>n the realm of data science, web scraping is an essential tool for uncovering valuable insights hidden within the vast expanse of online information. For this blog post, I’ve combined my love for baseball with web scraping skills and wanted to find an answer to the following question: Do physical attributes like height and weight truly influence a player’s ability to smash home runs in Major League Baseball?</p>
-<br>
-<p>The ultimate goal of this blog is to allow you to understand web scraping and encourage you to try web scraping out for yourself after reading this post.</p>
 
-
-### What is Machine Learning?
+### What is Web Scraping?
 Machine Learning (ML) is a type of AI where computers learn from data to make decisions or predictions. Instead of telling the computer exactly what to do, we give it lots of examples, and it figures things out by itself. Unlike traditional programming, where rules and logic are explicitly coded by humans, ML algorithms learn patterns and relationships within data through experience. Once trained, these algorithms can apply their learned knowledge to make decisions without being programmed for specific tasks.
 
 <div style="text-align: center;">
