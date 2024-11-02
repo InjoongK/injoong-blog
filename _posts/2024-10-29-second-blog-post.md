@@ -2,7 +2,7 @@
 layout: post
 title: "Breaking Stereotypes: Do Bigger MLB Players Really Hit More Homeruns?"
 author: Injoong Kim
-description: "Explore the key differences between Machine Learning (ML) and its advanced subfield, Deep Learning (DL). Learn how ML finds patterns in data, while DL uses neural networks for complex tasks, driving innovations in industries like healthcare and autonomous systems."
+description: "Do bigger players really hit more home runs? To answer this, I used web scraping to gather data on the height, weight, and home run stats of the 200 MLB players in 2023! Through this project, I hope you’ll get more familiar with web scraping and maybe even learn a few tips for your own data adventures. Come check it out!"
 image:
 ---
 
@@ -11,7 +11,7 @@ image:
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg"> Wikimedia Commons</a></figcaption>
 </div>
 
-<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">A<span style="display: inline-block; height: 66px;"></span></span>rtificial Intelligence is changing how we use technology, with Machine Learning and Deep Learning being its key branches. Deep Learning, a specialized form of Machine Learning, handles more complex tasks.If you've ever been confused about them, you're not alone. In this blog, we’ll explain their basics, differences, and real-world applications to clear up any confusion.</p>
+<p class="intro"><span class="dropcap" style="float: left; padding: 0px; font-size: 94.2857px; line-height: 0px; margin-top: 14.3px; height: 66px;">I<span style="display: inline-block; height: 66px;"></span></span>n the realm of data science, web scraping is an essential tool for uncovering valuable insights hidden within the vast expanse of online information. For this blog post, I’ve combined my love for baseball with web scraping skills and wanted to find an answer to the following question: Do physical attributes like height and weight truly influence a player’s ability to smash home runs in Major League Baseball? The ultimate goal of this blog is to allow you to understand web scraping and encourage you to try web scraping out for yourself after reading this post.</p>
 
 
 ### What is Machine Learning?
