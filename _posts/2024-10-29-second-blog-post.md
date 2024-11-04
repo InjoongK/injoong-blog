@@ -12,15 +12,15 @@ image:
 </div>
 
 ### Introduction
-<p>Baseball is all about the numbers, and fans love to talk about stats. One big question is whether a player’s size makes a difference in hitting home runs. Do taller and heavier players really hit more homers, or is that just a stereotype?</p>
-<p>To find out, I decided to use web scraping which is a handy tool in data science that helps us collect information from websites. I’ll be gathering data on MLB players’ heights, weights, and home run counts from a reliable website. This project is a great way to practice web scraping and satisfy a curiosity about how size might affect a player’s batting performance.</p>
+Baseball is all about the numbers, and fans love to talk about stats. One big question is whether a player’s size makes a difference in hitting home runs. Do taller and heavier players really hit more homers, or is that just a stereotype?
+
+To find out, I decided to use web scraping which is a handy tool in data science that helps us collect information from websites. I’ll be gathering data on MLB players’ heights, weights, and home run counts from a reliable website. This project is a great way to practice web scraping and satisfy a curiosity about how size might affect a player’s batting performance.
 
 ### What is Web Scraping?
-<p>Web scraping is a method for automatically gathering information from websites. Instead of manually copying data from a webpage, web scraping uses a program to access the webpage, find the specific information you’re looking for (like text, images, or tables), and save it in a structured format, such as a spreadsheet or database. This technique is especially useful for collecting large amounts of data quickly and efficiently, making it a powerful tool in data analysis, research, and many other fields.</p>
-
+Web scraping is a method for automatically gathering information from websites. Instead of manually copying data from a webpage, web scraping uses a program to access the webpage, find the specific information you’re looking for (like text, images, or tables), and save it in a structured format, such as a spreadsheet or database. This technique is especially useful for collecting large amounts of data quickly and efficiently, making it a powerful tool in data analysis, research, and many other fields.
 
 ### Data Collection
-<p>For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. This includes player profiles and season statistics, making it ideal for extracting both physical and performance-related attributes.</p>
+For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. This includes player profiles and season statistics, making it ideal for extracting both physical and performance-related attributes.
 
 Website Used: Baseball-Reference.com (2023 MLB Standard Batting standings and player profile pages)
 Final Sample Size: 200 players with the highest number of at-bats during the 2023 MLB season
@@ -35,7 +35,7 @@ At Bats: Used to filter 200 players who had the most exposure to hitting opportu
 ### Web Scraping Process
 
 #### Step 1: Import Necessary Libraries
-##### Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
+Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
 
 ```python
 import requests
