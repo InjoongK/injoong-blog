@@ -35,7 +35,7 @@ At Bats: Used to filter 200 players who had the most exposure to hitting opportu
 ### Web Scraping Process
 
 #### Step 1: Import Necessary Libraries
-<p>Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.</p>
+##### Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
 
 ```python
 import requests
@@ -48,24 +48,53 @@ import pandas as pd
 - **pandas**: A powerful data manipulation tool for creating and managing data in tabular form.
 
 #### Step 2: Define the Target URL
-<p>We specify the URL of the page we want to scrape.</p>
+We specify the URL of the page we want to scrape.
 
 ```python
+# URL of the MLB 2023 Standard Batting page
 base_url = 'https://www.baseball-reference.com'
 main_url = f'{base_url}/leagues/majors/2023-standard-batting.shtml'
 ```
-<p>This URL leads to the MLB 2023 Standard Batting statistics page on baseball-reference.com.</p>
+This URL leads to the MLB 2023 Standard Batting statistics page on baseball-reference.com.
 
 #### Step 3: Fetch the HTML Content
-<p>Now, we fetch the HTML content of the page using requests.get and parse it with BeautifulSoup.</p>
+Now, we fetch the HTML content of the page using **requests.get** and parse it with BeautifulSoup. In web development, fetch refers to the process of retrieving data from a server or another source, typically over a network.
 
 ```python
+# Request the page and parse the HTML content
 response = requests.get(main_url)
 soup = BeautifulSoup(response.text, 'html.parser')
 ```
 
 - **requests.get(main_url)**: Sends a request to the URL and retrieves the HTML content.
 - **BeautifulSoup(response.text, 'html.parser')**: Parses the HTML content into a format we can easily navigate and search.
+
+#### Step 4: Locate the Relevant HTML Section
+We identify the section of the HTML containing the player data using its **div** ID
+
+```python
+# Target the specific div for Player Standard Batting
+batting_div = soup.find('div', id='div_players_standard_batting')
+```
+
+This **div** contains the entire table of player statistics.
+
+#### Step 5: Initialize a Data Structure
+We use a dictionary to store unique player records. The dictionary will help us avoid duplicates, especially for players who switched teams mid-season.
+
+```python
+# Initialize a dictionary to hold unique player records
+unique_players = {}
+```
+
+#### Step 6: Extract Player Data
+We loop through the table rows and extract player names, ages, and team abbreviations.
+
+```python
+# Initialize a dictionary to hold unique player records
+unique_players = {}
+```
+I used **age** to distinguish players with the same name. And I used **team names** to identify players who played for multiple teams during the 2023 MLB season. This helped us ensure we gathered the integrated record for each player who switched teams in 2023.
 
 ### Conclusion
 In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players’ physical attributes and their relationship to home run performance. By gathering data on 200 players from Baseball-Reference.com, I explored how height and weight could provide insights into batting power.
