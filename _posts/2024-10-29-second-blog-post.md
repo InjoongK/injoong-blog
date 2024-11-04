@@ -16,27 +16,28 @@ image:
 <p>To find out, I decided to use web scraping which is a handy tool in data science that helps us collect information from websites. I’ll be gathering data on MLB players’ heights, weights, and home run counts from a reliable website. This project is a great way to practice web scraping and satisfy a curiosity about how size might affect a player’s batting performance.</p>
 
 ### What is Web Scraping?
-Web scraping is a method for automatically gathering information from websites. Instead of manually copying data from a webpage, web scraping uses a program to access the webpage, find the specific information you’re looking for (like text, images, or tables), and save it in a structured format, such as a spreadsheet or database. This technique is especially useful for collecting large amounts of data quickly and efficiently, making it a powerful tool in data analysis, research, and many other fields.
+<p>Web scraping is a method for automatically gathering information from websites. Instead of manually copying data from a webpage, web scraping uses a program to access the webpage, find the specific information you’re looking for (like text, images, or tables), and save it in a structured format, such as a spreadsheet or database. This technique is especially useful for collecting large amounts of data quickly and efficiently, making it a powerful tool in data analysis, research, and many other fields.</p>
 
 
-### Data Collection Process
-- **Algorithms Learn from Data**: Machine learning works by studying lots of data to find patterns. It's like teaching a computer by showing it examples. The more it learns, the better it gets at making predictions.
-- **Decision-Making**: Once trained, the model can make predictions or decisions based on new data. Instead of following predefined rules, it uses statistical relationships learned during training to infer outcomes, continuously improving its accuracy over time.
+### Data Collection
+<p>For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. This includes player profiles and season statistics, making it ideal for extracting both physical and performance-related attributes.</p>
+
+Website Used: Baseball-Reference.com (2023 MLB Standard Batting standings and player profile pages)
+Final Sample Size: 200 players with the highest number of at-bats during the 2023 MLB season
+Variables:
+Player Name: Identification
+Home Runs: Player's total number of homeruns in the 2023 season
+Height: Player's height
+Weight: Player's weight
+At Bats: Used to filter 200 players who had the most exposure to hitting opportunities
+
 
 ### Web Scraping Process
-
-<div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MachineLearningTypes.png" alt="Types of Machine Learning" width="770" height="385"> <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn</a></figcaption>
-</div>
-
-- **Supervised Learning**: In supervised learning, the model is trained using labeled data, meaning each input comes with the correct output. The model learns by comparing its predictions to the actual labels and adjusting until it can accurately predict outcomes.
-- **Unsupervised Learning**: In unsupervised learning, the computer gets data without any labels. It has to figure out patterns all by itself, like trying to group things that are similar. 
-- **Reinforcement Learning**: Reinforcement learning involves training a model to make decisions through trial and error, and receiving feedback through rewards or penalties.
 
 If you want to know more about types of machine learning, you can refer to my recommended <a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn post</a>.
 
 ### Conclusion
-In summary, deep learning is an advanced subset of machine learning, extending its capabilities through deep neural networks. Each has its strengths: machine learning is effective for tasks with smaller datasets and simpler algorithms, while deep learning excels in handling large datasets and more complex tasks. As both technologies continue to evolve, they are driving significant advancements in AI, shaping innovations in industries such as healthcare, autonomous systems, and natural language processing.
+In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players’ physical attributes and their relationship to home run performance. By gathering data on 200 players from Baseball-Reference.com, I explored how height and weight could provide insights into batting power.
 
 ### Try It Out!
-Now that you've learned about machine learning and deep learning, why not explore some videos or articles that demonstrate how to create simple deep learning models? Platforms like <a href="https://www.youtube.com/watch?v=J4Qsr93L1qs"> YouTube</a> and educational websites (such as <a href="https://learning.linkedin.com/"> LinkedIn Learning</a> or <a href="https://www.coursera.org/"> Coursea</a>) offer many tutorials that guide you step-by-step through the process. This will help you see how these concepts work in practice and deepen your understanding!
+Curious about what else you can do with this dataset? You can explore how a player's handedness (lefty, righty, or switch-hitter) affects their batting average. Do left-handed batters really have an edge? Or maybe you can use another dataset for your own curiosity! You can use the same web scraping techniques we covered here to gather more data and try it out yourself. Don’t worry if you’re new to scraping. Just follow the steps in the code, and you’ll be collecting data like an expert in no time!
