@@ -34,7 +34,18 @@ At Bats: Used to filter 200 players who had the most exposure to hitting opportu
 
 ### Web Scraping Process
 
-If you want to know more about types of machine learning, you can refer to my recommended <a href="https://www.linkedin.com/pulse/differences-supervised-unsupervised-reinforcement-learning-anu-shreya/"> LinkedIn post</a>.
+#### Step 1: Import Necessary Libraries
+<p>Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.</p>
+
+```python
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+```
+
+-**requests**: This library helps us fetch the HTML content of the web page.
+-**BeautifulSoup**: Used for parsing and navigating through the HTML structure.
+-**pandas**: A powerful data manipulation tool for creating and managing data in tabular form.
 
 ### Conclusion
 In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players’ physical attributes and their relationship to home run performance. By gathering data on 200 players from Baseball-Reference.com, I explored how height and weight could provide insights into batting power.
