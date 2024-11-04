@@ -7,10 +7,11 @@ image:
 ---
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/AI.jpg" alt="AI image" width="600" height="480">
-  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:Artificial_Intelligence,_AI.jpg"> Wikimedia Commons</a></figcaption>
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/batter1.JPG" alt="Batter Image" width="600" height="480">
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:David-ortiz-batters-box.JPG"> Wikimedia Commons</a></figcaption>
 </div>
 
+### Introduction
 <p>Baseball is all about the numbers, and fans love to talk about stats. One big question is whether a player’s size makes a difference in hitting home runs. Do taller and heavier players really hit more homers, or is that just a stereotype?</p>
 <p>To find out, I decided to use web scraping which is a handy tool in data science that helps us collect information from websites. I’ll be gathering data on MLB players’ heights, weights, and home run counts from a reliable website. This project is a great way to practice web scraping and satisfy a curiosity about how size might affect a player’s batting performance.</p>
 
