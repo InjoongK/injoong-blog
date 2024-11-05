@@ -178,11 +178,13 @@ df_players['Home Runs per At-Bat'] = df_players['Home Runs'] / df_players['At Ba
 top_200_players = df_players.sort_values(by='At Bats', ascending=False).head(200)
 ```
 
-- A new metric is calculated to evaluate player efficiency in hitting home runs.
-- The top 200 players by at-bats are selected for further analysis.
+- **df_players['Home Runs'] / df_players['At Bats']**: A new metric is calculated to evaluate player efficiency in hitting home runs.
+- **df_players.sort_values(by='At Bats', ascending=False).head(200)**: The top 200 players by at-bats are selected for further analysis.
 
 ### Conclusion
-In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players’ physical attributes and their relationship to home run performance. By gathering data on 200 players from Baseball-Reference.com, I explored how height and weight could provide insights into batting power.
+In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players' performance, particularly focusing on their at-bats and home runs. By utilizing Python libraries like requests and BeautifulSoup, I extracted data from Baseball-Reference.com, collecting information on player names, ages, teams, at-bats, and home runs for the 2023 season. This data enabled me to calculate a performance metric, Home Runs per At-Bat, to assess player efficiency in hitting home runs.
+
+Through sorting and filtering the data, I identified the top 200 players with the most at-bats, ensuring the analysis was centered on players with the most at-bats in the 2023 MLB.
 
 ### Try It Out!
-Curious about what else you can do with this dataset? You can explore how a player's handedness (lefty, righty, or switch-hitter) affects their batting average. Do left-handed batters really have an edge? Or maybe you can use another dataset for your own curiosity! You can use the same web scraping techniques we covered here to gather more data and try it out yourself. Don’t worry if you’re new to scraping. Just follow the steps in the code, and you’ll be collecting data like an expert in no time!
+Curious about what else you can do with this dataset? You could explore how player handedness (left-handed, right-handed, or switch-hitter) affects their batting average. Do left-handed batters have an edge? Or perhaps you'd like to delve into other player stats, like on-base percentage or slugging percentage. Using the same web scraping techniques outlined in this post, you can easily collect additional data and start your analysis. Even if you're new to web scraping, just follow the code, and you'll be gathering and analyzing your custom datasets in no time!
