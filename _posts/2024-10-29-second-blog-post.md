@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Breaking Stereotypes: Do Bigger MLB Players Really Hit More Homeruns?"
+title: "Home Run Hunters: Finding MLB Players with the Best Batting Power and Home Run Efficiency"
 author: Injoong Kim
-description: "Do bigger players really hit more home runs? To answer this, I used web scraping to gather data on the height, weight, and home run stats of the 200 MLB players in 2023! Through this project, I hope you’ll get more familiar with web scraping and maybe even learn a few tips for your own data adventures. Come check it out!"
+description: "Do bigger players really hit more home runs? To answer this, I used web scraping to gather data on the stats of the 200 MLB players in 2023! Through this project, I hope you’ll get more familiar with web scraping and maybe even learn a few tips for your own project. Come check it out!"
 image:
 ---
 
@@ -12,31 +12,37 @@ image:
 </div>
 
 ### Introduction
-Baseball is all about the numbers, and fans love to talk about stats. One big question is whether a player’s size makes a difference in hitting home runs. Do taller and heavier players really hit more homers, or is that just a stereotype?
+Are you a baseball fan? What do you love most about the baseball game? For me, there’s nothing more exciting than watching a batter crush a home run. It’s that magical moment when the game can shift in an instant. If your team is ahead, a home run will cement the lead, and if your team is behind, it will spark hope for a comeback and fire up the crowd. A single home run can change the entire course of a game. 
 
-To find out, I decided to use web scraping which is a handy tool in data science that helps us collect information from websites. I’ll be gathering data on MLB players’ heights, weights, and home run counts from a reliable website. This project is a great way to practice web scraping and satisfy a curiosity about how size might affect a player’s batting performance.
+So I want to find a batter who hits the most home runs on a given hitting opportunity, assuming that I have become a scouter. And I want to find a player who has pure strong batting power. Forget the batting average or other stats. I'm focusing on power and efficiency. Let’s dive in and see who the ultimate sluggers are!
 
 ### What is Web Scraping?
 Web scraping is a method for automatically gathering information from websites. Instead of manually copying data from a webpage, web scraping uses a program to access the webpage, find the specific information you’re looking for (like text, images, or tables), and save it in a structured format, such as a spreadsheet or database. This technique is especially useful for collecting large amounts of data quickly and efficiently, making it a powerful tool in data analysis, research, and many other fields.
 
 ### Data Collection
-For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. This includes player profiles and season statistics, making it ideal for extracting both physical and performance-related attributes.
+For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. 
 
-Website Used: Baseball-Reference.com (2023 MLB Standard Batting standings and player profile pages)
-Final Sample Size: 200 players with the highest number of at-bats during the 2023 MLB season
-Variables:
-Player Name: Identification
-Age:
-Home Runs: Player's total number of homeruns in the 2023 season
-At Bats: Used to filter 200 players who had the most exposure to hitting opportunities
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.PNG" alt="MLB Player Standard Batting Table" width="750" height="450">
+</div>
 
+**Website Used**: <a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml"> baseball-reference.com (2023 MLB Standard Batting standings) </a>
+**Final Sample Size**: 200 players with the highest number of at-bats during the 2023 MLB season
+**Variables**
+- Player Name: Identification
+- Age: Used to distinguish players who have the same name
+- Team Name: Used to uniquely distinguish the records of players who played for different teams in a season
+- Home Runs: Player's total number of homeruns in the 2023 season
+- At Bats: It refers to the number of times a batter enters the batter's box and completes a hitting, and walks, sacrifice bunt, and interference with batting are not included in the number of at bat. It is used to filter 200 players who had the highest number of at-bats in the MLB 2023 season.
+- SLG: The SLG (Slugging Percentage) is an expected figure of how many bases a batter can get on base after hitting.
+- BA: The BA (Batting Average) is determined by dividing a player's hits by their total at-bats. I use it to get ISO (Isolated Power)
 
+With **Home Runs** and **At Bats**, I will try to get batters' number of **Home Runs per At Bat**. Through this, I will be able to see their efficiency at home runs.
+
+And I will use **SLG** and **BA** to get **ISO** to know the players' pure SLG. ISO (Isolated Power) is a simple method of subtracting the batting average from the slugging percentage and refers to a record that selects only additional bases generated by extra-base hit. Extra-base hit is a collective term for doubles, triples, and home runs excluding single hits in baseball. This determines whether a player's slugging percentage depends on the high batting average or whether he actually hits extra-base often. 
 
 ### Web Scraping Process
-우리는 웹스크래핑을위해 BeautifulSoup를 이용할꺼야. 
-뷰티풀수프는 이거야.
-이웹사이트에서 뷰티풀수프에대한 정보와 기본 syntax를 확인할수있어.
-기본적인 syntax는 이거야. 
+Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href=https://beautiful-soup-4.readthedocs.io/en/latest/>this website</a>.
 
 #### Step 1: Import Necessary Libraries
 Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
@@ -46,7 +52,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 ```
-
 - **requests**: This library helps us fetch the HTML content of the web page.
 - **BeautifulSoup**: Used for parsing and navigating through the HTML structure.
 - **pandas**: A powerful data manipulation tool for creating and managing data in tabular form.
@@ -67,6 +72,7 @@ Now, we fetch the HTML content of the page using **requests.get** and parse it w
 ```python
 # Request the page and parse the HTML content
 response = requests.get(main_url)
+response.encoding = 'utf-8'  # Set encoding to handle special characters like ñ correctly
 soup = BeautifulSoup(response.text, 'html.parser')
 ```
 
@@ -92,7 +98,7 @@ unique_players = {}
 ```
 
 #### Step 6: Extract Player Data
-We loop through the table rows and extract player names, ages, and team abbreviations.
+Loop through the table rows and extract players' info and data that I need.
 
 ```python
 if batting_div:
@@ -102,49 +108,53 @@ if batting_div:
     team_tag = row.find('td', {'data-stat': 'team_name_abbr'})  # Team abbreviation
     at_bats_tag = row.find('td', {'data-stat': 'b_ab'})  # At-bats column
     home_runs_tag = row.find('td', {'data-stat': 'b_hr'})  # Home Runs column
+    slg_tag = row.find('td', {'data-stat': 'b_slugging_perc'})  # Slugging Percentage column
+    ba_tag = row.find('td', {'data-stat': 'b_batting_avg'})  # Batting Average column
 ```
-I used **age** to distinguish players with the same name. And I used **team names** to identify players who played for multiple teams during the 2023 MLB season. This helped us ensure we gathered the integrated record for each player who switched teams in 2023. And I also extracted the At Bats column to filter out the top 200 who played the most at-bats in the 2023 MLB season.
 
 - **batting_div.find_all('tr')[1:]**: Finds all tr (table row) elements inside the div, skipping the first row (header).
 - **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
-For age, team, at bats and home runs codes, same method was used.
+For other tags, same method was used.
 
 #### Step 7: Clean and Store Data
 We clean and store the data in a dictionary, ensuring no missing values and handling duplicates.
 ```python
-if player_tag and age_tag and team_tag and at_bats_tag and home_runs_tag:
-  player_name = player_tag.text.strip()
-  age = age_tag.text.strip()
-  team_name = team_tag.text.strip()
-  at_bats = at_bats_tag.text.strip()
-  home_runs = home_runs_tag.text.strip()
+    player_name = player_tag.text.strip('*#')
+    age = age_tag.text.strip()
+    team_name = team_tag.text.strip()
+    at_bats = at_bats_tag.text.strip()
+    home_runs = home_runs_tag.text.strip()
+    slg_perc = slg_tag.text.strip('.')
+    batting_avg = ba_tag.text.strip('.')
+             
+    if not at_bats or not home_runs or not slg_perc or not batting_avg:
+      continue
+         
+    at_bats = int(at_bats)
+    home_runs = int(home_runs)
 
-  # Skip rows with missing at-bats or home runs
-  if not at_bats or not home_runs:
-    continue
-
-  at_bats = int(at_bats)
-  home_runs = int(home_runs)
-
-  # Skip the League Average row
-  if "League Average" in player_name:
-    continue
-
-  # Create a unique key based on player name and age
-  player_key = (player_name, age)
-
-  # Add or update the player's record in the dictionary
-  if player_key not in unique_players:
-    unique_players[player_key] = {
+    # make string to float and make it percentage
+    slg_perc = float(slg_perc)/1000.0
+    batting_avg = float(batting_avg)/1000.0
+        
+    if "League Average" in player_name:
+      continue
+            
+    # Create a unique key based on player name and age
+    player_key = (player_name, age)
+            
+    # Add or update the player's record in the dictionary
+    if player_key not in unique_players:
+      unique_players[player_key] = {
       'Player Name': player_name,
       'Age': age,
       'Team': team_name,
       'At Bats': at_bats,
-      'Home Runs': home_runs
-    }
+      'Home Runs': home_runs,
+      'Slugging Percentage': slg_perc,
+      'Batting Average': batting_avg
+      }
 ```
-- Missing data and unwanted rows (like "League Average") are filtered out.
-- Player records are uniquely identified by a combination of name and age.
 
 #### Step 8: Handle Multi-Team Players
 Special handling for players who played for multiple teams in the season.
@@ -158,10 +168,12 @@ Special handling for players who played for multiple teams in the season.
       unique_players[player_key]['Team'] = team_name
      unique_players[player_key]['At Bats'] = at_bats
      unique_players[player_key]['Home Runs'] = home_runs
+     unique_players[player_key]['Slugging Percentage'] = slg_perc
+     unique_players[player_key]['Batting Average'] = batting_avg
     elif current_team == '2TM' and team_name == '3TM':
       continue  # Keep existing '2TM'
 ```
-In Major League Baseball (MLB), some players may be traded or play for more than one team in a single season. On Baseball Reference, these players have their stats aggregated under team abbreviations like 2TM (for players who played for two teams) or 3TM (for players who played for three teams). This step ensures that we correctly record and update stats for such players.
+In Major League Baseball (MLB), some players may play for more than one team in a single season due to trade. On Baseball Reference, these players have their stats aggregated under team abbreviations like **2TM** (for players who played for two teams) or **3TM** (for players who played for three teams). This step ensures that we correctly record and update stats for such players.
 
 #### Step 9: Convert to DataFrame
 We convert the collected data into a Pandas DataFrame for easier analysis.
@@ -171,20 +183,29 @@ df_players = pd.DataFrame(unique_players.values())
 ```
 
 #### Step 10: Calculate Derived Metrics and Select Top Players
-Add a new column for home runs per at-bat and select the top 200 players by at-bats.
+Add new columns and select the top 200 players by at-bats. And I will save it as csv file.
 
 ```python
+# Add Home Runs per At-Bat column
 df_players['Home Runs per At-Bat'] = df_players['Home Runs'] / df_players['At Bats']
+
+# Add Isolated Power column
+df_players['Isolated Power'] = df_players['Slugging Percentage'] - df_players['Batting Average']
+
+# Reoder colums
+df_players = df_players.loc[:,['Player Name','Age','Team', 'At Bats', 'Home Runs', 'Home Runs per At Bat', 'Slugging Percentage', 'Batting Average', 'Isolated Power']]
+
+# Sort by 'At Bats' in descending order and select the top 200
 top_200_players = df_players.sort_values(by='At Bats', ascending=False).head(200)
+top_200_players.to_csv('baseball data.csv')
+top_200_players
 ```
 
-- **df_players['Home Runs'] / df_players['At Bats']**: A new metric is calculated to evaluate player efficiency in hitting home runs.
-- **df_players.sort_values(by='At Bats', ascending=False).head(200)**: The top 200 players by at-bats are selected for further analysis.
+### Ethics
+The data used for this blog post was sourced from **baseball-reference.com**, a publicly accessible site offering comprehensive baseball statistics for fans and researchers. The baseball-reference.com explicitly supports user exploration of its data, especially through its Stathead Baseball tool, designed to enhance fan engagement. For educational purposes, I accessed only permitted sections of the website, respecting the robots.txt file's limitations and avoiding any restricted areas or excessive request rates. I tried to adhere to ethical standards for public data usage.
 
 ### Conclusion
-In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players' performance, particularly focusing on their at-bats and home runs. By utilizing Python libraries like requests and BeautifulSoup, I extracted data from Baseball-Reference.com, collecting information on player names, ages, teams, at-bats, and home runs for the 2023 season. This data enabled me to calculate a performance metric, Home Runs per At-Bat, to assess player efficiency in hitting home runs.
-
-Through sorting and filtering the data, I identified the top 200 players with the most at-bats, ensuring the analysis was centered on players with the most at-bats in the 2023 MLB.
+In this blog post, I demonstrated how to use web scraping techniques to create a custom dataset on MLB players' performance, particularly focusing on their home runs and slugging performance. By utilizing Python libraries like requests and BeautifulSoup, I extracted data from Baseball-Reference.com, collecting information on player names, ages, teams, at-bats, home runs, slugging percentage, and batting average for the 2023 season. This data enabled me to calculate a performance metric, Home Runs per At-Bat and ISO (Isolated Power), to assess player efficiency in hitting home runs and extra-base hit. Through sorting and filtering the data, I identified the top 200 players with the most at-bats, ensuring the analysis was centered on players with the most at-bats in the 2023 MLB.
 
 ### Try It Out!
-Curious about what else you can do with this dataset? You could explore how player handedness (left-handed, right-handed, or switch-hitter) affects their batting average. Do left-handed batters have an edge? Or perhaps you'd like to delve into other player stats, like on-base percentage or slugging percentage. Using the same web scraping techniques outlined in this post, you can easily collect additional data and start your analysis. Even if you're new to web scraping, just follow the code, and you'll be gathering and analyzing your custom datasets in no time!
+Curious about what else you can do with this dataset? You could explore how player handedness (left-handed, right-handed, or switch-hitter) affects their batting average. Do left-handed batters have an edge? Or perhaps you'd like to delve into other player stats, like on-base percentage or slugging percentage. Using the same web scraping techniques outlined in this post, you can easily collect additional data and start your analysis. Even if you're new to web scraping, just follow the code, and you'll be gathering and analyzing your custom datasets in no time. Finally, be aware of the web scraping ethics!
