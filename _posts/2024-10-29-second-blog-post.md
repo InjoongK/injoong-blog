@@ -23,7 +23,7 @@ Web scraping is a method for automatically gathering information from websites. 
 For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. 
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.PNG" alt="MLB Player Standard Batting Table" width="750" height="450">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.png" alt="MLB Player Standard Batting Table" width="750" height="450">
 </div>
 
 **Website Used**: <a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml"> baseball-reference.com (2023 MLB Standard Batting standings) </a>
