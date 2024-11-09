@@ -45,9 +45,9 @@ With **Home Runs** and **At Bats**, I will try to get batters' number of **Home 
 And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which represents a player’s pure slugging power by focusing on extra-base hits (doubles, triples, and home runs). ISO, derived by subtracting batting average from slugging percentage, helps show if a player’s slugging depends on high averages or frequent extra-base hits.
 
 ## Web Scraping Process
-<p>Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href=https://beautiful-soup-4.readthedocs.io/en/latest/> this website</a>.</p>
+Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href="https://beautiful-soup-4.readthedocs.io/en/latest/"> this website</a>.
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/Web_Scraping_Process.jpg" alt="Web Scraping Process">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Web_Scraping_Process.jpg" alt="Web Scraping Process" width="750" height="450">
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> ThinkPalm</a></figcaption>
 </div>
 
