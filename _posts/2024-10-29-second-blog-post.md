@@ -51,8 +51,6 @@ Beautiful Soup is a Python package for parsing HTML and XML documents. It provid
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> ThinkPalm</a></figcaption>
 </div>
 
-
-
 ### Step 1: Import Necessary Libraries
 Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
 
@@ -204,7 +202,7 @@ top_200_players
 ```
 
 ## Ethics
-This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt/"> here</a>.
+This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
 
 ## Conclusion
 In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average. From this, I calculated metrics like Home Runs per At-Bat and ISO to assess home run efficiency and extra-base hitting. By sorting and filtering, I identified the top 200 players with the most at-bats, concentrating on those with the highest playtime in the 2023 season.
