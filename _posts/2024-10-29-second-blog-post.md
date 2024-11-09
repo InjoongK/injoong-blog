@@ -16,7 +16,7 @@ Are you a baseball fan? What do you love most about the baseball game? For me, t
 So I want to find a batter who hits the most home runs on a given hitting opportunity, assuming that I have become a scouter. And I want to find a player who has pure strong batting power. I’m focusing on power and efficiency.
 
 ## What is Web Scraping?
-Web scraping is an automated method to gather information from websites by using a program to extract specific data (like text, images, or tables) and save it in a structured format, such as a spreadsheet or database.
+Web scraping is an automated method to gather information from websites by using a program to extract specific data (like text, images, or tables) and save it in a structured format, such as a spreadsheet or database. You can learn more about Web Scraping at <a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> this website</a>.
 
 ## Data Collection
 For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. 
@@ -46,6 +46,12 @@ And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which r
 
 ## Web Scraping Process
 <p>Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href=https://beautiful-soup-4.readthedocs.io/en/latest/> this website</a>.</p>
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Web_Scraping_Process.jpg" alt="Web Scraping Process">
+  <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> ThinkPalm</a></figcaption>
+</div>
+
+
 
 ### Step 1: Import Necessary Libraries
 Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
@@ -198,7 +204,7 @@ top_200_players
 ```
 
 ## Ethics
-This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use.
+This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt/"> here</a>.
 
 ## Conclusion
 In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average. From this, I calculated metrics like Home Runs per At-Bat and ISO to assess home run efficiency and extra-base hitting. By sorting and filtering, I identified the top 200 players with the most at-bats, concentrating on those with the highest playtime in the 2023 season.
