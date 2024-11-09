@@ -82,25 +82,18 @@ soup = BeautifulSoup(response.text, 'html.parser')
 - **requests.get(main_url)**: Sends a request to the URL and retrieves the HTML content.
 - **BeautifulSoup(response.text, 'html.parser')**: Parses the HTML content into a format we can easily navigate and search.
 
-### Step 4: Locate the Relevant HTML Section
-We identify the section of the HTML containing the player data using its **div** ID
+### Step 4: Locate the Relevant HTML Section and Initialize a Data Structure
+We identify the section of the HTML containing the player data using its **div** ID. We use a dictionary to store unique player records. The dictionary will help us avoid duplicates, especially for players who switched teams mid-season.
 
 ```python
 # Target the specific div for Player Standard Batting
 batting_div = soup.find('div', id='div_players_standard_batting')
-```
 
-This **div** contains the entire table of player statistics.
-
-### Step 5: Initialize a Data Structure
-We use a dictionary to store unique player records. The dictionary will help us avoid duplicates, especially for players who switched teams mid-season.
-
-```python
 # Initialize a dictionary to hold unique player records
 unique_players = {}
 ```
 
-### Step 6: Extract Player Data
+### Step 5: Extract Player Data
 Loop through the table rows and extract players' info and data that I need.
 
 ```python
@@ -119,7 +112,7 @@ if batting_div:
 - **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
 For other tags, same method was used.
 
-### Step 7: Clean and Store Data
+### Step 6: Clean and Store Data
 We clean and store the data in a dictionary, ensuring no missing values and handling duplicates.
 ```python
     player_name = player_tag.text.strip('*#')
@@ -159,7 +152,7 @@ We clean and store the data in a dictionary, ensuring no missing values and hand
       }
 ```
 
-### Step 8: Handle Multi-Team Players
+### Step 7: Handle Multi-Team Players
 Special handling for players who played for multiple teams in the season.
 ```python
   else:
@@ -178,14 +171,14 @@ Special handling for players who played for multiple teams in the season.
 ```
 Some players may play for more than one team in a single season due to trade. On Baseball Reference, these players have their stats aggregated under team abbreviations like **2TM** (2 Teams) or **3TM** (3 Teams). This step ensures that we correctly record and update stats for such players.
 
-### Step 9: Convert to DataFrame
+### Step 8: Convert to DataFrame
 We convert the collected data into a Pandas DataFrame for easier analysis.
 
 ```python
 df_players = pd.DataFrame(unique_players.values())
 ```
 
-### Step 10: Calculate Derived Metrics and Select Top Players
+### Step 9: Calculate Derived Metrics and Select Top Players
 Add new columns and select the top 200 players by at-bats. And I will save it as csv file.
 
 ```python
