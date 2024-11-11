@@ -126,80 +126,35 @@ We clean and store the data in a dictionary, ensuring no missing values and hand
     home_runs = home_runs_tag.text.strip()
     slg_perc = slg_tag.text.strip('.')
     batting_avg = ba_tag.text.strip('.')
-             
-    if not at_bats or not home_runs or not slg_perc or not batting_avg:
-      continue
-         
-    at_bats = int(at_bats)
-    home_runs = int(home_runs)
-
-    # make string to float and make it percentage
-    slg_perc = float(slg_perc)/1000.0
-    batting_avg = float(batting_avg)/1000.0
-        
-    if "League Average" in player_name:
-      continue
-            
-    # Create a unique key based on player name and age
-    player_key = (player_name, age)
-            
-    # Add or update the player's record in the dictionary
-    if player_key not in unique_players:
-      unique_players[player_key] = {
-      'Player Name': player_name,
-      'Age': age,
-      'Team': team_name,
-      'At Bats': at_bats,
-      'Home Runs': home_runs,
-      'Slugging Percentage': slg_perc,
-      'Batting Average': batting_avg
-      }
 ```
+## Visuals and Insights
 
-### Step 7: Handle Multi-Team Players
-Special handling for players who played for multiple teams in the season.
-```python
-  else:
-    current_record = unique_players[player_key]
-    current_team = current_record['Team']
-    current_at_bats = current_record['At Bats']
-                
-    if current_team != '2TM' and team_name == '2TM':
-      unique_players[player_key]['Team'] = team_name
-     unique_players[player_key]['At Bats'] = at_bats
-     unique_players[player_key]['Home Runs'] = home_runs
-     unique_players[player_key]['Slugging Percentage'] = slg_perc
-     unique_players[player_key]['Batting Average'] = batting_avg
-    elif current_team == '2TM' and team_name == '3TM':
-      continue  # Keep existing '2TM'
-```
-Some players may play for more than one team in a single season due to trade. On Baseball Reference, these players have their stats aggregated under team abbreviations like **2TM** (2 Teams) or **3TM** (3 Teams). This step ensures that we correctly record and update stats for such players.
+### Relationship Between Home Runs and Isolated Power
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph1.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+</div>
 
-### Step 8: Convert to DataFrame
-We convert the collected data into a Pandas DataFrame for easier analysis.
+It shows a very strong positive correlation. While this might seem obvious, it demonstrates that home run efficiency is a reliable predictor of overall power-hitting ability. The nearly linear distribution of data points suggests a highly consistent relationship between these metrics.
 
-```python
-df_players = pd.DataFrame(unique_players.values())
-```
+### Top 10 by Home Runs per At Bats
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph2.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+</div>
 
-### Step 9: Calculate Derived Metrics and Select Top Players
-Add new columns and select the top 200 players by at-bats. And I will save it as csv file.
+Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. The top 10 players show remarkably similar performance levels.
 
-```python
-# Add Home Runs per At-Bat column
-df_players['Home Runs per At-Bat'] = df_players['Home Runs'] / df_players['At Bats']
+### Top 10 by Isolated Power
+<div style="text-align: center;">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph3.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+</div>
 
-# Add Isolated Power column
-df_players['Isolated Power'] = df_players['Slugging Percentage'] - df_players['Batting Average']
+Shohei Ohtani ranks first, with Aaron Judge in second place. Interestingly, the rankings differ somewhat from the Home Runs per At Bat list.
+Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
 
-# Reoder colums
-df_players = df_players.loc[:,['Player Name','Age','Team', 'At Bats', 'Home Runs', 'Home Runs per At Bat', 'Slugging Percentage', 'Batting Average', 'Isolated Power']]
-
-# Sort by 'At Bats' in descending order and select the top 200
-top_200_players = df_players.sort_values(by='At Bats', ascending=False).head(200)
-top_200_players.to_csv('baseball data.csv')
-top_200_players
-```
+### Overall Insights
+- Several players (particularly Ohtani, Judge, and Olson) appear at the top of both rankings, confirming their status as true elite power hitters.
+- The variation in rankings between Isolated Power (which considers all extra-base hits) and Home Runs per At Bat reveals different hitting style preferences among top players.
+- The data clearly shows the existence of a distinct power-hitting elite in MLB, reflecting the importance of power hitting in modern baseball.
 
 ## Ethics
 This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
