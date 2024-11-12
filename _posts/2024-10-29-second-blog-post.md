@@ -9,7 +9,7 @@ image:
 Are you a baseball fan? What do you love most about the baseball game? For me, there’s nothing more exciting than watching a batter crush a home run. It’s that magical moment when the game can shift in an instant. If your team is ahead, a home run will cement the lead, and if your team is behind, it will spark hope for a comeback and fire up the crowd. 
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/batter1.JPG" alt="Batter Image" width="750" height="450">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/batter1.JPG" alt="Batter Image" width="600" height="350">
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:David-ortiz-batters-box.JPG"> Wikimedia Commons</a></figcaption>
 </div>
 
@@ -22,7 +22,7 @@ Web scraping is an automated method to gather information from websites by using
 For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. 
 
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.png" alt="MLB Player Standard Batting Table" width="900" height="450">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.png" alt="MLB Player Standard Batting Table" width="700" height="350">
 </div>
 
 #### Website Used 
@@ -32,22 +32,21 @@ For this project, the main data source is Baseball-Reference.com, a widely respe
 200 players with the highest number of at-bats during the 2023 MLB season
 
 #### Variables
-- **Player Name**: Identification
-- **Age**: Used to distinguish players who have the same name
-- **Team Name**: Used to uniquely distinguish the records of players who played for different teams in a season
+- **Player Name**
+- **Age**
+- **Team Name**
 - **Home Runs**: Player's total number of homeruns in the 2023 season
-- **At Bats**: The number of at-bats counts each time a batter completes a hit, excluding walks, sacrifice bunts, and batting interference. It’s used to filter the top 200 MLB players with the most at-bats in the 2023 season.
-- **SLG**: The SLG (Slugging Percentage) is an expected figure of how many bases a batter can get on base after hitting.
-- **BA**: The BA (Batting Average) is determined by dividing a player's hits by their total at-bats. I use it to get ISO (Isolated Power)
+- **At Bats**: The number of at-bats counts each time a batter completes a hit, excluding walks, sacrifice bunts, and batting interference.
+- **SLG (Slugging Percentage)**: An expected figure of how many bases a batter can get on base after hitting.
+- **BA (Batting Average)**: Determined by dividing a player's hits by their total at-bats. I use it to get ISO (Isolated Power)
 
-With **Home Runs** and **At Bats**, I will try to get batters' number of **Home Runs per At Bat**. Through this, I will be able to see their efficiency at home runs.
-
-And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which represents a player’s pure slugging power by focusing on extra-base hits (doubles, triples, and home runs). ISO, derived by subtracting batting average from slugging percentage, helps show if a player’s slugging depends on high averages or frequent extra-base hits.
+With **Home Runs** and **At Bats**, I will try to get batters' number of **Home Runs per At Bat** to see their efficiency at home runs. And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which represents a player’s pure slugging power by focusing on extra-base hits (doubles, triples, and home runs). ISO, derived by subtracting the batting average from the slugging percentage, helps show if a player’s slugging depends on high averages or frequent extra-base hits.
 
 ## Web Scraping Process
 Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href="https://beautiful-soup-4.readthedocs.io/en/latest/"> this website</a>.
+
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/Web_Scraping_Process.jpg" alt="Web Scraping Process" width="750" height="450">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Web_Scraping_Process.jpg" alt="Web Scraping Process" width="600" height="350">
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> ThinkPalm</a></figcaption>
 </div>
 
@@ -78,13 +77,10 @@ Now, we fetch the HTML content of the page using **requests.get** and parse it w
 
 ```python
 # Request the page and parse the HTML content
-response = requests.get(main_url)
+response = requests.get(main_url) # Sends a request to the URL and retrieves the HTML content.
 response.encoding = 'utf-8'  # Set encoding to handle special characters like ñ correctly
-soup = BeautifulSoup(response.text, 'html.parser')
+soup = BeautifulSoup(response.text, 'html.parser') # Parses the HTML content into a format we can easily navigate and search.
 ```
-
-- **requests.get(main_url)**: Sends a request to the URL and retrieves the HTML content.
-- **BeautifulSoup(response.text, 'html.parser')**: Parses the HTML content into a format we can easily navigate and search.
 
 ### Step 4: Locate the Relevant HTML Section and Initialize a Data Structure
 We identify the section of the HTML containing the player data using its **div** ID. We use a dictionary to store unique player records. The dictionary will help us avoid duplicates, especially for players who switched teams mid-season.
@@ -102,8 +98,8 @@ Loop through the table rows and extract players' info and data that I need.
 
 ```python
 if batting_div:
-  for row in batting_div.find_all('tr')[1:]:  # Skip the header row
-    player_tag = row.find('td', {'data-stat': 'name_display'})
+  for row in batting_div.find_all('tr')[1:]:  # Finds all tr (table row) elements inside the div, skipping the first row (header).
+    player_tag = row.find('td', {'data-stat': 'name_display'}) # Player name column
     age_tag = row.find('td', {'data-stat': 'age'})  # Age column
     team_tag = row.find('td', {'data-stat': 'team_name_abbr'})  # Team abbreviation
     at_bats_tag = row.find('td', {'data-stat': 'b_ab'})  # At-bats column
@@ -112,7 +108,6 @@ if batting_div:
     ba_tag = row.find('td', {'data-stat': 'b_batting_avg'})  # Batting Average column
 ```
 
-- **batting_div.find_all('tr')[1:]**: Finds all tr (table row) elements inside the div, skipping the first row (header).
 - **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
 For other tags, same method was used.
 
@@ -148,8 +143,7 @@ Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. Th
   <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph3.png" alt="MLB Player Standard Batting Table" width="550" height="350">
 </div>
 
-Shohei Ohtani ranks first, with Aaron Judge in second place. Interestingly, the rankings differ somewhat from the Home Runs per At Bat list.
-Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
+Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
 
 ### Overall Insights
 - Several players (particularly Ohtani, Judge, and Olson) appear at the top of both rankings, confirming their status as true elite power hitters.
@@ -160,7 +154,7 @@ Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this 
 This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
 
 ## Conclusion
-In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average. From this, I calculated metrics like Home Runs per At-Bat and ISO to assess home run efficiency and extra-base hitting. By sorting and filtering, I identified the top 200 players with the most at-bats, concentrating on those with the highest playtime in the 2023 season.
+In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average.
 
 ## Try It Out!
 Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages, or explore other stats like on-base percentage or steal base. Using the same web scraping techniques, you can easily collect more data and start analyzing. Just follow the code, and you'll be creating custom datasets in no time. Just remember to adhere to ethical web scraping practices!
