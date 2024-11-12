@@ -20,7 +20,7 @@ Web scraping is a technique to gather information from websites to extract speci
 
 ## Data Collection
 #### Website Used 
-For this project, the main data source is <a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml">. baseball-reference.com (2023 MLB Standard Batting standings) </a>
+For this project, the main data source is <a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml"> baseball-reference.com (2023 MLB Standard Batting standings) </a>.
 
 #### Final Sample Size
 200 players with the highest number of at-bats during the 2023 MLB season
@@ -128,4 +128,4 @@ I accessed only allowed sections, respecting robots.txt restrictions and avoidin
 In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance. Using Python libraries like requests and BeautifulSoup, I was able to extract players' data.
 
 ## Try It Out!
-Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages or explore other stats like on-base percentage. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub repository</a>.
+Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages or explore other stats like on-base percentage. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub Repository</a>.
