@@ -6,17 +6,17 @@ description: "Come and check out how I curated a data set of the top 200 players
 image:
 ---
 ## Introduction
-Are you a baseball fan? What do you love most about the baseball game? For me, there’s nothing more exciting than watching a batter crush a home run. It’s that magical moment when the game can shift in an instant. If your team is ahead, a home run will cement the lead, and if your team is behind, it will spark hope for a comeback and fire up the crowd. 
+Are you a baseball fan? What do you love most about the baseball game? For me, there’s nothing more exciting than watching a batter crush a home run. It’s that magical moment when the game can shift in an instant.
 
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/batter1.JPG" alt="Batter Image" width="600" height="350">
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:David-ortiz-batters-box.JPG"> Wikimedia Commons</a></figcaption>
 </div>
 
-So I want to find a batter who hits the most home runs on a given hitting opportunity, assuming that I have become a scouter. And I want to find a player who has pure strong batting power. I’m focusing on power and efficiency.
+So I want to find a batter who hits the most home runs on a given hitting opportunity and a batter who has pure strong batting power, assuming that I have become a scouter.
 
 ## What is Web Scraping?
-Web scraping is an automated method to gather information from websites by using a program to extract specific data (like text, images, or tables) and save it in a structured format, such as a spreadsheet or database. You can learn more about Web Scraping at <a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> this website</a>.
+Web scraping is a technique to gather information from websites to extract specific data (like text, images, or tables). You can learn more about Web Scraping at <a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> this website</a>.
 
 ## Data Collection
 #### Website Used 
