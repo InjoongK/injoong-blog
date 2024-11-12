@@ -86,25 +86,21 @@ batting_div = soup.find('div', id='div_players_standard_batting')
 unique_players = {}
 ```
 
-### Step 5: Extract Player Data
+### Step 5: Extract and Clean Player Data
 
 ```python
 if batting_div:
+  # Extracting data
   for row in batting_div.find_all('tr')[1:]:  # Finds all tr (table row) elements inside the div, skipping the first row (header).
-    player_tag = row.find('td', {'data-stat': 'name_display'}) # Player name column
-    age_tag = row.find('td', {'data-stat': 'age'})  # Age column
-    team_tag = row.find('td', {'data-stat': 'team_name_abbr'})  # Team abbreviation
-    at_bats_tag = row.find('td', {'data-stat': 'b_ab'})  # At-bats column
-    home_runs_tag = row.find('td', {'data-stat': 'b_hr'})  # Home Runs column
-    slg_tag = row.find('td', {'data-stat': 'b_slugging_perc'})  # Slugging Percentage column
-    ba_tag = row.find('td', {'data-stat': 'b_batting_avg'})  # Batting Average column
-```
+    player_tag = row.find('td', {'data-stat': 'name_display'})
+    age_tag = row.find('td', {'data-stat': 'age'})
+    team_tag = row.find('td', {'data-stat': 'team_name_abbr'})
+    at_bats_tag = row.find('td', {'data-stat': 'b_ab'})
+    home_runs_tag = row.find('td', {'data-stat': 'b_hr'})
+    slg_tag = row.find('td', {'data-stat': 'b_slugging_perc'})
+    ba_tag = row.find('td', {'data-stat': 'b_batting_avg'})
 
-- **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
-For other tags, same method was used.
-
-### Step 6: Clean and Store Data
-```python
+    # Cleaning data
     player_name = player_tag.text.strip('*#')
     age = age_tag.text.strip()
     team_name = team_tag.text.strip()
@@ -113,6 +109,9 @@ For other tags, same method was used.
     slg_perc = slg_tag.text.strip('.')
     batting_avg = ba_tag.text.strip('.')
 ```
+- **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
+For other tags, same method was used.
+
 ## Visuals and Insights
 
 ### Relationship Between Home Runs and Isolated Power
