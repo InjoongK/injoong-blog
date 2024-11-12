@@ -19,14 +19,8 @@ So I want to find a batter who hits the most home runs on a given hitting opport
 Web scraping is an automated method to gather information from websites by using a program to extract specific data (like text, images, or tables) and save it in a structured format, such as a spreadsheet or database. You can learn more about Web Scraping at <a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> this website</a>.
 
 ## Data Collection
-For this project, the main data source is Baseball-Reference.com, a widely respected website that provides comprehensive stats on MLB players. 
-
-<div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/MLBPSB.png" alt="MLB Player Standard Batting Table" width="700" height="350">
-</div>
-
 #### Website Used 
-<a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml"> baseball-reference.com (2023 MLB Standard Batting standings) </a>
+For this project, the main data source is <a href="https://www.baseball-reference.com/leagues/majors/2023-standard-batting.shtml">. baseball-reference.com (2023 MLB Standard Batting standings) </a>
 
 #### Final Sample Size
 200 players with the highest number of at-bats during the 2023 MLB season
@@ -38,9 +32,9 @@ For this project, the main data source is Baseball-Reference.com, a widely respe
 - **Home Runs**: Player's total number of homeruns in the 2023 season
 - **At Bats**: The number of at-bats counts each time a batter completes a hit, excluding walks, sacrifice bunts, and batting interference.
 - **SLG (Slugging Percentage)**: An expected figure of how many bases a batter can get on base after hitting.
-- **BA (Batting Average)**: Determined by dividing a player's hits by their total at-bats. I use it to get ISO (Isolated Power)
+- **BA (Batting Average)**: Determined by dividing a player's hits by their total at-bats.
 
-With **Home Runs** and **At Bats**, I will try to get batters' number of **Home Runs per At Bat** to see their efficiency at home runs. And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which represents a player’s pure slugging power by focusing on extra-base hits (doubles, triples, and home runs). ISO, derived by subtracting the batting average from the slugging percentage, helps show if a player’s slugging depends on high averages or frequent extra-base hits.
+With **Home Runs** and **At Bats**, I will try to get batters' number of **Home Runs per At Bat** to see their efficiency at home runs. And I’ll use **SLG** and **BA** to calculate **ISO** (Isolated Power), which represents a player’s pure slugging power by focusing on extra-base hits (doubles, triples, and home runs). ISO helps show if a player’s slugging depends on high batting averages or frequent extra-base hits.
 
 ## Web Scraping Process
 Beautiful Soup is a Python package for parsing HTML and XML documents. It provides features to make it easier to scrape information from web pages and is useful for web scraping. You can check the information about Beautiful Soup and the basic syntax on <a href="https://beautiful-soup-4.readthedocs.io/en/latest/"> this website</a>.
@@ -86,21 +80,24 @@ batting_div = soup.find('div', id='div_players_standard_batting')
 unique_players = {}
 ```
 
-### Step 5: Extract and Clean Player Data
-
+### Step 5: Extract Data
 ```python
 if batting_div:
-  # Extracting data
   for row in batting_div.find_all('tr')[1:]:  # Finds all tr (table row) elements inside the div, skipping the first row (header).
-    player_tag = row.find('td', {'data-stat': 'name_display'})
+    player_tag = row.find('td', {'data-stat': 'name_display'}) 
     age_tag = row.find('td', {'data-stat': 'age'})
     team_tag = row.find('td', {'data-stat': 'team_name_abbr'})
     at_bats_tag = row.find('td', {'data-stat': 'b_ab'})
     home_runs_tag = row.find('td', {'data-stat': 'b_hr'})
     slg_tag = row.find('td', {'data-stat': 'b_slugging_perc'})
     ba_tag = row.find('td', {'data-stat': 'b_batting_avg'})
+```
 
-    # Cleaning data
+- **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
+For other tags, same method was used.
+
+### Step 6: Clean Data
+```python
     player_name = player_tag.text.strip('*#')
     age = age_tag.text.strip()
     team_name = team_tag.text.strip()
@@ -109,9 +106,6 @@ if batting_div:
     slg_perc = slg_tag.text.strip('.')
     batting_avg = ba_tag.text.strip('.')
 ```
-- **row.find('td', {'data-stat': 'name_display'}**): Finds the player's name. Specifically targets a <td> tag where data-stat="name_display". 
-For other tags, same method was used.
-
 ## Visuals and Insights
 
 ### Relationship Between Home Runs and Isolated Power
