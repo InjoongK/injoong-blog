@@ -45,8 +45,6 @@ Beautiful Soup is a Python package for parsing HTML and XML documents. It provid
 </div>
 
 ### Step 1: Import Necessary Libraries
-Before we start, we need to import the required libraries. These libraries will help us send requests to the website and parse the HTML content.
-
 ```python
 import requests # library that helps us fetch the HTML content of the web page
 from bs4 import BeautifulSoup # Used for parsing and navigating through the HTML structure.
@@ -54,7 +52,6 @@ import pandas as pd # data manipulation tool for creating and managing data in t
 ```
 
 ### Step 2: Define the Target URL
-
 ```python
 # URL of the MLB 2023 Standard Batting page
 base_url = 'https://www.baseball-reference.com' # specify the URL of the page we want to scrape.
@@ -62,8 +59,6 @@ main_url = f'{base_url}/leagues/majors/2023-standard-batting.shtml' # leads to t
 ```
 
 ### Step 3: Fetch the HTML Content
-In web development, fetch refers to the process of retrieving data from a server or another source, typically over a network.
-
 ```python
 # Request the page and parse the HTML content
 response = requests.get(main_url) # Sends a request to the URL and retrieves the HTML content.
@@ -128,10 +123,6 @@ Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. Th
 </div>
 
 Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
-
-### Overall Insights
-- Several players (particularly Ohtani, Judge, and Olson) appear at the top of both rankings, confirming their status as true elite power hitters.
-- The variation in rankings between Isolated Power and Home Runs per At Bat reveals different hitting style preferences among top players.
 
 ## Ethics
 This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
