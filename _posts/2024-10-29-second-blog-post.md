@@ -117,21 +117,21 @@ For other tags, same method was used.
 
 ### Relationship Between Home Runs and Isolated Power
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph1.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph1.png" alt="Relationship Between Home Runs and Isolated Power" width="550" height="350">
 </div>
 
 It shows a very strong positive correlation. While this might seem obvious, it demonstrates that home run efficiency is a reliable predictor of overall power-hitting ability. The nearly linear distribution of data points suggests a highly consistent relationship between these metrics.
 
 ### Top 10 by Home Runs per At Bats
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph2.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph2.png" alt="Top 10 by Home Runs per At Bats" width="550" height="350">
 </div>
 
 Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. The top 10 players show remarkably similar performance levels.
 
 ### Top 10 by Isolated Power
 <div style="text-align: center;">
-  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph3.png" alt="MLB Player Standard Batting Table" width="550" height="350">
+  <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph3.png" alt="Top 10 by Isolated Power" width="550" height="350">
 </div>
 
 Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
