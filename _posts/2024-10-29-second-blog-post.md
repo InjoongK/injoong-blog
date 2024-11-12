@@ -122,10 +122,10 @@ Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. Th
 Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
 
 ## Ethics
-This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
+I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
 
 ## Conclusion
-In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average.
+In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance. Using Python libraries like requests and BeautifulSoup, I was able to extract players' data.
 
 ## Try It Out!
-Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages, or explore other stats like on-base percentage or steal base. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub repository</a>. Just follow the code, and you'll be creating custom datasets in no time.
+Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages or explore other stats like on-base percentage. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub repository</a>.
