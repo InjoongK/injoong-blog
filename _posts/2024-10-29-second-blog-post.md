@@ -60,14 +60,12 @@ import pandas as pd # data manipulation tool for creating and managing data in t
 ```
 
 ### Step 2: Define the Target URL
-We specify the URL of the page we want to scrape.
 
 ```python
 # URL of the MLB 2023 Standard Batting page
-base_url = 'https://www.baseball-reference.com'
-main_url = f'{base_url}/leagues/majors/2023-standard-batting.shtml'
+base_url = 'https://www.baseball-reference.com' # specify the URL of the page we want to scrape.
+main_url = f'{base_url}/leagues/majors/2023-standard-batting.shtml' # leads to the MLB 2023 Standard Batting statistics page on baseball-reference.
 ```
-This URL leads to the MLB 2023 Standard Batting statistics page on baseball-reference.com.
 
 ### Step 3: Fetch the HTML Content
 In web development, fetch refers to the process of retrieving data from a server or another source, typically over a network.
@@ -80,7 +78,6 @@ soup = BeautifulSoup(response.text, 'html.parser') # Parses the HTML content int
 ```
 
 ### Step 4: Locate the Relevant HTML Section and Initialize a Data Structure
-
 ```python
 # Target the specific div ID for Player Standard Batting
 batting_div = soup.find('div', id='div_players_standard_batting')
@@ -107,7 +104,6 @@ if batting_div:
 For other tags, same method was used.
 
 ### Step 6: Clean and Store Data
-We clean and store the data in a dictionary, ensuring no missing values and handling duplicates.
 ```python
     player_name = player_tag.text.strip('*#')
     age = age_tag.text.strip()
@@ -152,4 +148,4 @@ This blog post uses data from **baseball-reference.com**, a public site offering
 In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance, focusing on home runs and slugging. Using Python libraries like requests and BeautifulSoup, I extracted player data, including names, ages, teams, at-bats, home runs, slugging percentage, and batting average.
 
 ## Try It Out!
-Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages, or explore other stats like on-base percentage or steal base. Using the same web scraping techniques, you can easily collect more data and start analyzing. Just follow the code, and you'll be creating custom datasets in no time.
+Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages, or explore other stats like on-base percentage or steal base. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub repository</a>. Just follow the code, and you'll be creating custom datasets in no time.
