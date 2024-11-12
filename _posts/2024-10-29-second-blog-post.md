@@ -66,13 +66,10 @@ response.encoding = 'utf-8'  # Set encoding to handle special characters like ñ
 soup = BeautifulSoup(response.text, 'html.parser') # Parses the HTML content into a format we can easily navigate and search.
 ```
 
-### Step 4: Locate the Relevant HTML Section and Initialize a Data Structure
+### Step 4: Locate the Relevant HTML Section
 ```python
 # Target the specific div ID for Player Standard Batting
 batting_div = soup.find('div', id='div_players_standard_batting')
-
-# Initialize a dictionary to hold unique player records
-unique_players = {}
 ```
 
 ### Step 5: Extract Data
