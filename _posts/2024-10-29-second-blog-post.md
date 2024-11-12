@@ -138,8 +138,7 @@ Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances
 
 ### Overall Insights
 - Several players (particularly Ohtani, Judge, and Olson) appear at the top of both rankings, confirming their status as true elite power hitters.
-- The variation in rankings between Isolated Power (which considers all extra-base hits) and Home Runs per At Bat reveals different hitting style preferences among top players.
-- The data clearly shows the existence of a distinct power-hitting elite in MLB, reflecting the importance of power hitting in modern baseball.
+- The variation in rankings between Isolated Power and Home Runs per At Bat reveals different hitting style preferences among top players.
 
 ## Ethics
 This blog post uses data from **baseball-reference.com**, a public site offering baseball stats for fans and researchers. I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
