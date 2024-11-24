@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Find MLB Players with the Best Batting Power and Home Run Efficiency"
+title: "Who Rules the Batter’s Box with Power?"
 author: Injoong Kim
 description: "Come and check out how I curated a data set of the top 200 players in the 2023 MLB season using web scraping."
 image:
@@ -13,7 +13,7 @@ Are you a baseball fan? What do you love most about the baseball game? For me, t
   <figcaption style="font-style: italic; color: #5e5e5e;">Source:<a href="https://commons.wikimedia.org/wiki/File:David-ortiz-batters-box.JPG"> Wikimedia Commons</a></figcaption>
 </div>
 
-So I want to find a batter who hits the most home runs on a given hitting opportunity and a batter who has pure strong batting power, assuming that I have become a scouter.
+So I want to find a batter who hits the most home runs on a given hitting opportunity and a batter who has pure strong batting power, assuming that I have become a scouter. This analysis looks deeper into the data to find who stands out the most in the batter’s box.
 
 ## What is Web Scraping?
 Web scraping is a technique to gather information from websites to extract specific data (like text, images, or tables). You can learn more about Web Scraping at <a href="https://thinkpalm.com/blogs/5-great-ways-web-scraping-tool-helps-businesses/"> this website</a>.
@@ -98,8 +98,7 @@ For other tags, same method was used.
     slg_perc = slg_tag.text.strip('.')
     batting_avg = ba_tag.text.strip('.')
 ```
-## Visuals and Insights
-
+## Exploratory Data Analysis (EDA)
 ### Relationship Between Home Runs and Isolated Power
 <div style="text-align: center;">
   <img src="https://injoongk.github.io/injoong-blog/assets/img/Graph1.png" alt="Relationship Between Home Runs and Isolated Power" width="550" height="350">
@@ -121,11 +120,13 @@ Aaron Judge leads the pack, followed closely by Matt Olson and Shohei Ohtani. Th
 
 Shohei Ohtani ranks first, with Aaron Judge in second place. Notable appearances by Corey Seager and Luis Robert Jr. are exclusively on this list. This suggests these players excel at producing various types of extra-base hits, not just home runs.
 
+### Why These Metrics Matter?
+These metrics offer valuable insights into player performance. HR/AB reveals a batter’s efficiency, making it a key indicator for teams seeking players who consistently deliver results at the plate. Meanwhile, ISO showcases a player’s raw power and ability to produce high-value hits, making it an essential tool for scouts evaluating offensive impact.
+
 ## Ethics
 I accessed only allowed sections, respecting robots.txt restrictions and avoiding excessive requests, in adherence to ethical standards for public data use. You can check the robots.txt of baseball-reference.com <a href="https://www.baseball-reference.com/robots.txt"> here</a>.
 
 ## Conclusion
-In this blog post, I used web scraping techniques to create a custom dataset on MLB players' 2023 performance. Using Python libraries like requests and BeautifulSoup, I was able to extract players' data.
+In this blog post, I explored MLB player performance for the 2023 season, focusing on home run efficiency and pure batting power. Using web scraping techniques with Python libraries like requests and BeautifulSoup, I collected data from Baseball-Reference to create a custom dataset of 200 players with the most at-bats. By calculating metrics such as home runs per at-bat and isolated power (ISO), I identified players like Aaron Judge, Shohei Ohtani, and Matt Olson, who demonstrate exceptional power-hitting skills.
 
-## Try It Out!
 Curious about what else you can do with this dataset? You could explore how player handedness (left, right, or switch-hitter) impacts batting averages or explore other stats like on-base percentage. Using the same web scraping techniques, you can easily collect more data and start analyzing. You can check my entire code on my <a href="https://github.com/InjoongK/injoong-blog/blob/main/_posts/baseball_data.ipynb"> GitHub Repository</a>.
