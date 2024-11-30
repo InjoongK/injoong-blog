@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MLB Power Hitting Analysis: Exploring Metrics and Interactivity"
-date: 2024-12-02
+date: 2024-11-29
 author: Injoong Kim
 description: "Come see how I analyzed the top 200 players' power metrics like Home Runs per At-Bat and Isolated Power from the 2023 MLB season! Plus, explore it all with my interactive Streamlit app!"
 image:
