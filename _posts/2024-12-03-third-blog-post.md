@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Who Rules the Batter’s Box with Power?"
+title: "MLB Power Hitting Analysis: Exploring Metrics and Interactivity"
 author: Injoong Kim
 description: "Come see how I analyzed the top 200 players' power metrics like Home Runs per At-Bat and Isolated Power from the 2023 MLB season! Plus, explore it all with my interactive Streamlit app!"
 image:
